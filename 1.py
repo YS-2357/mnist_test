@@ -1,1 +1,0 @@
-print("git에서 push")
