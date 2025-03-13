@@ -1,12 +1,3 @@
-# Python cache files
-__pycache__/
-*.py[cod]
-
-# Jupyter Notebook checkpoints
-.ipynb_checkpoints
-
-# MNIST dataset
-data/mnist/
-
-# System files
-.DS_Store 
+__pychache__/
+*.pyc
+/data

@@ -9,3 +9,5 @@ def get_mnist_data_loader(batch_size=64, train=True):
     dataset = datasets.MNIST(root='./data/mnist', train=train, transform=transform, download=True)
     data_loader = torch.utils.data.DataLoader(dataset, batch_size=batch_size, shuffle=True)
     return data_loader 
+
+train = get_mnist_data_loader()
