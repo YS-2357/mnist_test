@@ -1,5 +1,5 @@
 import torch
-from mnist_test.models.SimpleMLP import SimpleMLP
+from models.SimpleMLP import SimpleMLP
 from utils.data_loader import get_mnist_data_loader
 from src.utils import load_model
 
