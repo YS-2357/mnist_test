@@ -9,8 +9,8 @@ class FromScratch(nn.Module):
         self.conv3 = nn.Conv2d(16, 32, kernel_size=3, padding=1)
         self.pool = nn.MaxPool2d(kernel_size=2, stride=2)
         self.relu = nn.ReLU()
-        self.fc1 = nn.Linear(32 * 3 * 3, 128)
-        self.fc2 = nn.Linear(128, 10)
+        self.fc1 = nn.Linear(32 * 3 * 3, 64)
+        self.fc2 = nn.Linear(64, 10)
 
     def forward(self, x):
         x = self.relu(self.conv1(x))
