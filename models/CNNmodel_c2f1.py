@@ -23,11 +23,3 @@ class CNNmodel_c2f1(nn.Module):
         x = x.view(x.size(0), -1)
         x = self.fc1(x)
         return x
-
-# model = CNNmodel_c2f1()
-
-
-# optimizer = optim.Adam(model.parameters(), lr=0.001)
-# criterion = nn.CrossEntropyLoss()
-
-# torchsummary.summary(model, input_size=(1, 28, 28))
