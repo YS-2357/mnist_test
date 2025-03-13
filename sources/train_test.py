@@ -1,10 +1,10 @@
 import torch
 import torch.nn as nn
 import torch.optim as optim
-from models.From_Scratch import FromScratch
-from models.fromscratch import SimpleCNN
-from models.mlp import SimpleMLP
-from models.model_jeonghun import CNNmodel_c2f1
+from models.FromScratch import FromScratch
+from models.SimpleCNN import SimpleCNN
+from models.SimpleMLP import SimpleMLP
+from models.CNNmodel_c2f1 import CNNmodel_c2f1
 from utils.data_loader import get_mnist_data_loader
 
 def train(model_name, epochs, device):
