@@ -1,19 +1,16 @@
 import torch
 import torch.nn as nn
 import torch.optim as optim
-from models.From_Scratch import FromScratch
-from models.fromscratch import SimpleCNN
-from models.mlp import SimpleMLP
-from models.model_jeonghun import CNNmodel_c2f1
+from models.SimpleCNN import SimpleCNN
+from models.SimpleMLP import SimpleMLP
+from models.CNNmodel_c2f1 import CNNmodel_c2f1
 from utils.data_loader import get_mnist_data_loader
 
 def train(model_name, epochs, device):
     # 데이터 로더
     train_loader = get_mnist_data_loader(train=True)
     
-    if model_name == "fromscratch":
-        model = FromScratch()
-    elif model_name == "simplecnn":
+    if model_name == "simplecnn":
         model = SimpleCNN()
     elif model_name == "simplemlp":
         model = SimpleMLP()
@@ -45,9 +42,7 @@ def train(model_name, epochs, device):
                 print(f'Epoch {epoch}, Batch {batch_idx}, Loss: {loss.item():.4f}')
 
     # 모델 가중치 저장
-    if isinstance(model, FromScratch):
-        torch.save(model.state_dict(), "fromscratch.pth")
-    elif isinstance(model, SimpleCNN):
+    if isinstance(model, SimpleCNN):
         torch.save(model.state_dict(), "simplecnn.pth")
     elif isinstance(model, SimpleMLP):
         torch.save(model.state_dict(), "simplemlp.pth")
